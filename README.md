@@ -1,11 +1,13 @@
 Fork of polargraph firmware for Arduino 
 =======================================
-
+ 
 Added GRBL and Ramps 1.4 configuration in serial driver configuration.
 
 Edit polargraph_server_a1.ino and configuration.ino to select board and shield
 ------------------------------------------------------------------------------
 
+
+Use with polargraph controller (https://github.com/euphy/polargraphcontroller)
 
 Project and software written by Sandy Noble.
 
