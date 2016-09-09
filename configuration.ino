@@ -51,13 +51,33 @@ Note that the pen lift servo usually lives on pin 9, so avoid
 that if you can. If you can't, then you know how to change it.
 */
 #ifdef SERIAL_STEPPER_DRIVERS
-#define MOTOR_A_ENABLE_PIN 3
-#define MOTOR_A_STEP_PIN 4
-#define MOTOR_A_DIR_PIN 5
-  
-#define MOTOR_B_ENABLE_PIN 6
-#define MOTOR_B_STEP_PIN 7
-#define MOTOR_B_DIR_PIN 8
+  #if MICROCONTROLLER == MC_UNO
+    #define MOTOR_A_ENABLE_PIN 8
+    #define MOTOR_A_STEP_PIN 2
+    #define MOTOR_A_DIR_PIN 5
+      
+    #define MOTOR_B_ENABLE_PIN 8
+    #define MOTOR_B_STEP_PIN 3
+    #define MOTOR_B_DIR_PIN 6
+  #else
+    #if MICROCONTROLLER == MC_MEGA
+      #define MOTOR_A_ENABLE_PIN 3
+      #define MOTOR_A_STEP_PIN 4
+      #define MOTOR_A_DIR_PIN 5
+        
+      #define MOTOR_B_ENABLE_PIN 6
+      #define MOTOR_B_STEP_PIN 7
+      #define MOTOR_B_DIR_PIN 8
+    #else
+      #define MOTOR_A_ENABLE_PIN D38
+      #define MOTOR_A_STEP_PIN A0
+      #define MOTOR_A_DIR_PIN A1
+        
+      #define MOTOR_B_ENABLE_PIN A2
+      #define MOTOR_B_STEP_PIN A6
+      #define MOTOR_B_DIR_PIN A7
+    #endif
+  #endif
 AccelStepper motorA(1,MOTOR_A_STEP_PIN, MOTOR_A_DIR_PIN); 
 AccelStepper motorB(1,MOTOR_B_STEP_PIN, MOTOR_B_DIR_PIN); 
 #endif

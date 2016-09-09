@@ -36,8 +36,8 @@ There are five config sections:
 // ======================================================
 // UNO or MEGA. Uncomment the line for the kind of board you have.
 #ifndef MICROCONTROLLER
-#define MICROCONTROLLER MC_UNO
-//#define MICROCONTROLLER MC_MEGA
+//define MICROCONTROLLER MC_UNO
+#define MICROCONTROLLER MC_MEGA
 #endif
 
 
@@ -45,8 +45,8 @@ There are five config sections:
 // ========================================
 // Uncomment the SPI and SD lines below if you have a MEGA.  
 // http://forum.arduino.cc/index.php?topic=173584.0
-//#include <SPI.h>
-//#include <SD.h>
+#include <SPI.h>
+#include <SD.h>
 
 
 // 3. Specify what kind of motor driver you are using
@@ -55,8 +55,8 @@ There are five config sections:
 
 //   i. Adafruit Motorshield v1. The original, and still the best.
 //   -------------------------------------------------------------
-#define ADAFRUIT_MOTORSHIELD_V1
-#include <AFMotor.h>
+//#define ADAFRUIT_MOTORSHIELD_V1
+//#include <AFMotor.h>
 
 //   ii. Adafruit Motorshield v2. It's all squealy.
 //   ----------------------------------------------
@@ -68,7 +68,7 @@ There are five config sections:
 //   iii. Using discrete stepper drivers? (eg EasyDriver, stepstick, Pololu gear)
 //   ----------------------------------------------------------------------------
 //   Don't forget to define your pins in 'configuration.ino'.
-//#define SERIAL_STEPPER_DRIVERS 
+#define SERIAL_STEPPER_DRIVERS 
 
 //   iv. Using a signal amplifier like a UNL2003? 
 //   --------------------------------------------
