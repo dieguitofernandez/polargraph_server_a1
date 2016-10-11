@@ -132,7 +132,7 @@ const int DEFAULT_UP_POSITION = 180;
 static int upPosition = DEFAULT_UP_POSITION; // defaults
 static int downPosition = DEFAULT_DOWN_POSITION;
 static int penLiftSpeed = 3; // ms between steps of moving motor
-const byte PEN_HEIGHT_SERVO_PIN = 9; //UNL2003 driver uses pin 9
+const byte PEN_HEIGHT_SERVO_PIN = 11; //UNL2003 driver uses pin 9
 boolean isPenUp = false;
 
 // Machine specification defaults
